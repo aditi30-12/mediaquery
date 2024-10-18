@@ -1,0 +1,41 @@
+#grid{
+  width: 90%;
+  text-align: center;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+}
+.grid-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+  }
+.grid-item {
+    background-color: #4CAF50;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+  }
+/* Grid layout for small screens (mobile) */
+@media(max-width:600px){
+  .grid-container{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Grid layout for medium screens (tablet) */
+@media(min-width:601px) and (max-width:900px){
+  .grid-container{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+/* Grid layout for large screens (desktop) */
+@media(min-width:901px){
+  .grid-container{
+    grid-template-columns: repeat(4,1fr);
+  }
+}
